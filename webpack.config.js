@@ -17,7 +17,23 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Home',
+      template: 'src/templates/index.pug'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Product',
+      filename: 'product.html',
+      template: 'src/templates/product.pug'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Access',
+      filename: 'access.html',
+      template: 'src/templates/access.pug'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Contact',
+      filename: 'contact.html',
+      template: 'src/templates/contact.pug'
     }),
     new MiniCssExtractPlugin(),
   ],
