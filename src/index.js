@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import printMe from './print.js';
-import './style.scss';
+import './stylesheets/style.scss';
 
  function component() {
    const element = document.createElement('div');

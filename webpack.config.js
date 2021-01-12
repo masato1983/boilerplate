@@ -35,7 +35,9 @@ module.exports = {
       filename: 'contact.html',
       template: 'src/templates/contact.pug'
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'stylesheets/[name].css'
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
