@@ -14,6 +14,7 @@ module.exports = {
     contentBase: './dist',
     writeToDisk: true,
   },
+  target: 'web',
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
@@ -48,7 +49,12 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
