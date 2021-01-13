@@ -22,7 +22,9 @@
        url('../fonts/OpenSans-SemiBold.ttf') format('ttf');
 }
 
-.hello {
+html {
+  body {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
+  }
 }
