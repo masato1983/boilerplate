@@ -12,6 +12,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
+    open: 'Google Chrome',
     writeToDisk: true,
   },
   target: 'web',
