@@ -25,17 +25,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Product',
       filename: 'product.html',
-      template: 'src/templates/product.pug'
+      template: 'src/templates/pages/product.pug'
     }),
     new HtmlWebpackPlugin({
       title: 'Access',
       filename: 'access.html',
-      template: 'src/templates/access.pug'
+      template: 'src/templates/pages/access.pug'
     }),
     new HtmlWebpackPlugin({
       title: 'Contact',
       filename: 'contact.html',
-      template: 'src/templates/contact.pug'
+      template: 'src/templates/pages/contact.pug'
     }),
     new MiniCssExtractPlugin({
       filename: 'stylesheets/[name].css'
