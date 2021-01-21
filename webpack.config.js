@@ -19,21 +19,17 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
-      title: 'Home',
       template: 'src/templates/index.pug'
     }),
     new HtmlWebpackPlugin({
-      title: 'Product',
       filename: 'product.html',
       template: 'src/templates/pages/product.pug'
     }),
     new HtmlWebpackPlugin({
-      title: 'Access',
       filename: 'access.html',
       template: 'src/templates/pages/access.pug'
     }),
     new HtmlWebpackPlugin({
-      title: 'Contact',
       filename: 'contact.html',
       template: 'src/templates/pages/contact.pug'
     }),
@@ -83,12 +79,15 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        use: {
-            loader: 'pug-loader',
+        use: [
+          'html-loader',
+          {
+            loader: 'pug-html-loader',
             options: {
               pretty: true
+            }
           }
-        }
+        ]
       },
     ],
   },
