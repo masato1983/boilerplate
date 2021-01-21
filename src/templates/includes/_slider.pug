@@ -1,0 +1,7 @@
+mixin slide(src, active='')
+  div(class='carousel-item '+active)
+    img.d-block.w-100(src=src alt='...')
+
++slide('http://placeimg.com/640/480/arch?t=1611043155921', 'active')
++slide('http://placeimg.com/640/480/arch?t=1611043155922')
++slide('http://placeimg.com/640/480/arch?t=1611043155923')

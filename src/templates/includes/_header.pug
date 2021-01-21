@@ -1,0 +1,11 @@
+mixin menu(menu_items)
+  .navbar-nav
+    each item in menu_items
+      a.nav-link(href=item.href class= {active: currentUrl === item.href}) #{item.title}
+
++menu([
+  {'title': 'ホーム', 'href' : 'index.html'},
+  {'title': '商品', 'href': 'product.html'},
+  {'title': '連絡先', 'href': 'contact.html'},
+  {'title': 'アクセス', 'href' : 'access.html'},
+])
